@@ -1,0 +1,12 @@
+/* Map Area CSS */
+.map-area {
+    .map-wrap {
+        iframe {
+            min-width: 100%;
+            min-height: 25rem;
+            border: 0; 
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/* Breadcrumb Area CSS */
+.breadcrumb-area {
+    background-image: url(../img/page-bg.jpg);
+    padding: 10rem 0 4rem;
+
+    @include breakpoint-up(xlarge) {
+        padding: 12rem 0 7rem;
+    }
+
+    .breadcrumb-content {
+        h2 {
+            margin-bottom: 0.625rem;
+            font-weight: 400;
+            font-family: "Oleo Script", cursive;
+            font-size: 3.5rem;
+
+            @include breakpoint-down(small) {
+                font-size: 3rem;
+            }
+        }
+
+        ul {
+            display: flex;
+            
+            li {
+                text-transform: capitalize;
+                &:not(:last-child) {
+                    padding-right: 0.625rem;
+                }
+
+                a {
+                    color: $white;
+                    transition: color 250ms ease;
+    
+                    &:hover {
+                        color: $main_color;
+                    }
+                }
+            }            
+        }
+
+    }
+}

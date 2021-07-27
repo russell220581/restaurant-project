@@ -1,0 +1,82 @@
+/* About Area CSS */
+.about-area {
+    .about-us-wrap {
+        @include breakpoint-up(large) {
+            grid-template-columns: 7fr 5fr;
+        }
+
+        .about-us-content {            
+            .section-title {
+                margin-bottom: 2.5rem;
+            }
+
+            .content-wrap {
+                @include breakpoint-down(medium) {
+                    text-align: center;
+                }
+                
+                a {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .about-us-image {
+            position: relative;
+            
+            img {
+                &:nth-child(1) {
+                    border: 1px solid $gray;
+                }
+
+                &:nth-child(2) {
+                    @include breakpoint-up(large) {
+                        position: absolute;
+                        bottom: 0;
+                        right: 1rem;
+                        max-width: 85%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* About Page Area CSS */
+    .about-area-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.875rem;
+        width: 100%;
+
+        @include breakpoint-up(large) {
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 3rem;
+        }
+
+        .about-area-image {                
+            img {
+                border: 1px solid $gray;
+                padding: 0.25rem;
+            }
+        }
+
+        &.reverse {
+            margin-top: 1.875rem;
+
+            @include breakpoint-up(large) {
+                grid-template-columns: 2fr 1fr;
+                margin-top: 4rem;
+
+                .about-area-image {
+                    order: 2;
+                }
+    
+                .about-area-content {
+                    order: 1;
+                }
+            }
+            
+        }
+    }
+}

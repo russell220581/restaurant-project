@@ -1,0 +1,21 @@
+/* Top CTA Area */
+.cta-top {
+    background-image: url(../img/top_cta.jpg);
+    padding: 5rem 0px;
+
+    .section-title {
+        color: $white;
+        margin: 0;
+
+        h2 {
+            color: $white;
+            margin-top: 0.625rem;
+
+            span {
+                color: $main_color;
+                font-family: "Oleo Script", cursive;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

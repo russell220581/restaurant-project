@@ -1,0 +1,78 @@
+/* Testimonial Area CSS */
+.testimonial-area {
+    background-image: url(../img/testi_back.jpg);
+    color: $white;
+    
+    .testimonial-wrap {
+        
+        .slick-dots {
+            position: absolute;
+            left: 50%;
+            bottom: -1.5rem;
+            transform: translateX(-50%);
+
+            @include breakpoint-down(medium) {
+                bottom: -1rem;
+            }
+
+            li {
+                display: inline-block;
+                
+                &:not(:last-child) {
+                    margin-right: 0.375rem;
+                }
+
+                button {
+                    width: 0.875rem;
+                    height: 0.875rem;
+                    text-indent: -99rem;
+                    cursor: pointer;
+                    border: 0;
+                    border-radius: 50%;
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: $main_color;
+                    }
+                }
+            }
+        }
+
+        .testimonial-item {
+            text-align: center;
+            padding: 1.75rem;
+
+            @include breakpoint-down(small) {
+                padding: 1rem 0.75rem;
+            }
+
+            .testimonial-image {
+                width: 6rem;
+                height: 6rem;
+                border: 1px dashed $gray;
+                border-radius: 50%;
+                padding: 0.25rem;
+                margin: 0 auto;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+            .testimonial-content {
+                h4 {
+                    span {
+                        display: block;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        padding-top: 0.375rem;
+                    }
+                }
+
+                p {
+                    margin: 1.25rem 0 0.5rem;
+                }
+            }
+        }
+    }
+}

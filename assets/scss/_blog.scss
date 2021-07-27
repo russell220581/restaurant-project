@@ -1,0 +1,33 @@
+/* Blog Area CSS */
+.blog-area {
+    background-color: $bg_gray;
+
+    .blog-wrap {
+        .single-blog {
+            .content-wrap {
+                background-color: rgb(255, 255, 255);
+                padding: 1.5rem;
+
+                .blog-meta {
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px dashed $dark;
+                    
+                    a {
+                        text-transform: capitalize;
+                        font-weight: 700;
+                    }
+                }
+                .blog-content {
+                    a {
+                        text-transform: capitalize;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

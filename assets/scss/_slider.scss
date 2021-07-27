@@ -1,0 +1,115 @@
+/* Slider Area CSS */
+.slider-area {
+    .sliders {
+        button {
+            &.slick-arrow {
+                width: 3rem;
+                height: 3rem;
+                background-color: $main_color;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 0;
+                border-radius: 0.125rem;
+                cursor: pointer;
+                z-index: 3;
+    
+                &.slick-prev {
+                    left: 5rem;
+
+                    @include breakpoint-down(medium) {
+                        left: 2rem;
+                    }
+
+                    @include breakpoint-up(xlarge) {
+                        left: 15rem;
+                    }
+                }
+    
+                &.slick-next {
+                    right: 5rem;
+
+                    @include breakpoint-down(medium) {
+                        right: 2rem;
+                    }
+
+                    @include breakpoint-up(xlarge) {
+                        right: 15rem;
+                    }
+                }
+
+                i {
+                    font-size: 1.25rem;
+                }
+
+                @include breakpoint-down(small) {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+        
+
+        .slider-item {
+            position: relative;
+            height: 100vh;
+
+            @include breakpoint-down(medium) {
+                height: 60vh;
+            }
+
+            @include breakpoint-down(small) {
+                height: 100vh;
+            }
+
+            .slider-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 85%;
+                height: 100%;
+                margin: 0 auto;
+
+                @include breakpoint-down(medium) {
+                    width: 85%;
+                    text-align: center;
+                }
+
+                h1 {
+                    color: $white;
+                    text-transform: uppercase;
+                    margin: 1.5rem 0 3rem;
+
+                    @include breakpoint-down(small) {
+                        margin: 1rem 0 1.75rem;
+                    }
+                }
+
+                h3 {
+                    color: $white;
+                    text-transform: lowercase;
+
+                    @include breakpoint-down(small) {
+                        font-size: 1.375rem;
+                        
+                    }
+                }
+
+                .slider-btns {
+                    a {
+                        font-weight: 600;
+                        &:not(:last-child) {
+                            margin-right: 0.5rem;
+                        }
+
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
